@@ -1,0 +1,56 @@
+<div class="container" >  
+    <h2 style="text-align: center;background-color: greenyellow;;color:red; margin-top: 20px;font-family: myFirstFont;font-weight: bold;">My Guitar Shop</h2>
+    <hr style="border-color:coral"> <!--end titile-->
+
+    <div class="row">
+        <div class="col-sm-4" style=" font-weight: bold; font-size: 20px;">
+          <h5 style="color:tomato;">Links</h5>
+            <ul>
+              <a [routerLink]="['/']"> <li>view cart</li> </a>
+              <a href="#"> <li>login/Register</li></a>
+              <a [routerLink]="['/trangchu']"> <li>home</li> </a>
+              <a [routerLink]="['/giohang']"> <li>Your Cart</li> </a>
+            </ul>
+            <h5 style="color:tomato;">Categories</h5>
+            <ul *ngFor='let s of product'>
+              <a [routerLink]="['/trangchu']"><li>{{s.catename}}</li></a>
+            </ul>
+            <h5 style="color:tomato;">Temp Link</h5>
+            <ul>
+              <a href="#"> <li>Admin</li> </a>
+            </ul>
+  
+        </div> <!--end col-4-->
+      <div class="col-7">
+        <router-outlet></router-outlet>
+      </div>
+      </div> <!--end row-->
+      <footer style="width: 100%;border-top:1px solid green;height: auto;background-color: lightgreen;padding: 0px; margin-top: 10px;">
+          <div class="row" style="padding: 20px;">
+            <div class="col-4">
+              
+                <h3>Chính sách</h3>
+                <p>Chính sách giao hàng</p>
+                <p>Chính sách bảo hành & đổi trả </p>
+                <p>Chính sách thanh toán</p>
+              
+            </div>
+            <div class= "col-4">
+                
+                    <h3>Dịch vụ & hỗ trợ</h3>
+                    <p>An toàn mua bán</p>
+                    <p>Đăng kí cộng tác viên</p>
+                    <p>Câu hỏi thường gặp</p>
+                
+            </div>
+            <div class= "col-4">
+                <h3>Giờ mua hàng</h3>
+                <p>Giờ mở cửa: <b> 7h30' </b></p>
+                <p>Giò đóng cửa: <b> 11h30' </b></p>
+                <p style="color: red;font-weight: bold;">Liên hệ: *********</p>
+            </div>  
+          </div>
+          <hr style="border:0.5px solid green;">
+         <p style="text-align:center;padding-bottom: 10px;">copyrigh hungngan185@gmail.com</p>
+      </footer> <!--end footer-->
+</div>

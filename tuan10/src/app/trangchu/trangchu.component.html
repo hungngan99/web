@@ -1,0 +1,19 @@
+ We have a great selection of musiccal instrument including guitars, bassees, and drums. And  we're constantly adding more to give you the best selection possibe !
+        <h4 style="color: chocolate;">Featured product</h4>
+             
+<div class="card" style="width: 100%;border: none;" *ngFor = "let s of infoGuitar" >
+        <div class="row"> 
+            <div class="col-4">
+          <img src="{{s.hinh}}" alt="..." width="90%" height="80%">
+            </div> <!--end col4-->
+            <div class="col-7">
+    <div class="card-body" >
+       <a [routerLink] = "['/trangchu',s.id]"><h5 class="card-title">{{s.productname}}</h5></a>
+        <h3> Your price : ${{s.price}}</h3>
+          <p class="card-text">{{s.description}}</p>
+    </div> <!--end card-body-->
+            </div><!--end col7-->
+        </div> <!--end row-->
+</div> <!--end card-->
+
+

@@ -1,0 +1,23 @@
+<div class="card" style="width: 100%;border: none;" >
+    <h4 style="color: chocolate;">{{product.productname}}</h4>
+        <div class="row"> 
+            <div class="col-4">
+    <img src="{{product.hinh}}" alt="..." width="90%" height="80%">
+            </div> <!--end col-4-->
+            <div class="col-7">
+    <div class="card-body">
+      <p>List Price: </p>${{product.price}} <br>
+      <p>Discount: </p>{{product.discount}} <br>
+      <p>Your Price: </p> <br>
+      <p>Quanlity: </p>
+      <input class="w1-input" type="number"> 
+      <button style="margin-left: 4px;display: inline;background-color: lightgrey;color: black;border-color: lightgrey;" type="button" class="btn btn-primary" (click)="addToCart()">Add to Card</button> <br> 
+      <h4 style="color: chocolate;margin-top: 20px;margin-bottom: 17px;">Description</h4>
+      {{product.description}}
+      <p>Newfeature:</p>
+    </div> <!--end card-body-->
+            </div> <!--end col-7-->
+    </div>
+  </div>
+
+
